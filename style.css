@@ -1,11 +1,13 @@
 #container{
     display: flex;
     flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
 }
 
 .cell{
     background-color: aquamarine;
-    flex:1 0 6.25%;
-    height: 80px;
+    flex-grow:1;
+    flex-basis: 6.25%;
     border: 1px solid black;
 }
