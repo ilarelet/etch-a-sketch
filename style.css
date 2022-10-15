@@ -3,11 +3,13 @@
     flex-wrap: wrap;
     width: 500px;
     height: 500px;
+    padding: 0;
 }
 
 .cell{
     background-color: aquamarine;
-    flex-grow:1;
-    flex-basis: 6.25%;
+    box-sizing: border-box;
     border: 1px solid black;
+    margin: 0;
+    padding: 0;
 }
