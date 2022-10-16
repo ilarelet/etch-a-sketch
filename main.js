@@ -28,7 +28,7 @@ const baseSize = 16;
 initSketch(baseSize);
 
 //setting up the RESIZE button
-const sizeButton = document.querySelector("#resize");
+const sizeButton = document.querySelector("#resizeBtn");
 sizeButton.addEventListener('click', ()=>{
     let newSize = prompt('Enter a new size of the sketch!');
     newSize=Number(newSize);
@@ -42,3 +42,17 @@ sizeButton.addEventListener('click', ()=>{
         initSketch(newSize);
     }
 })
+
+
+//setting up the clear button
+const clearButton = document.querySelector("#clearBtn");
+clearButton.addEventListener('click', ()=>{
+    //calculate the current size of the sketch
+    const cells = document.querySelectorAll('.cell');
+    const currentSize = Math.sqrt(cells.length);   
+    //delete existing sketch
+    clearSketch();
+    //create a new clear one
+    initSketch(currentSize);
+});
+
