@@ -1,6 +1,7 @@
 body{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #container{
@@ -10,6 +11,8 @@ body{
     height: 500px;
     padding: 0;
     border: 10px solid maroon;
+    flex: 0 0 500px;
+    margin-right: 100px;
 }
 
 .cell{
@@ -22,11 +25,14 @@ body{
 
 #menu{
     width: 500px;
-    margin: 40px 0 0 100px;
+    margin-top: 40px;
+    padding:10px;
     display: flex;
     flex-direction: column;
+    gap: 40px;
     justify-content: space-around;
 }
+
 
 .menuBtn{
     width:100%;
